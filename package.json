@@ -4,7 +4,11 @@
   "description": "Caru project",
   "main": "cypress.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:run:chrome": "cypress run --browser chrome",
+    "cypress:run:record": "cypress run --record"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/JoeriKamp/Caru-containers/issues"
   },
-  "homepage": "https://github.com/JoeriKamp/Caru-containers#readme"
+  "homepage": "https://github.com/JoeriKamp/Caru-containers#readme",
+  "dependencies": {
+    "cypress": "^14.0.0"
+  },
+  "devDependencies": {
+    "cypress": "^14.0.0"
+  }
 }
