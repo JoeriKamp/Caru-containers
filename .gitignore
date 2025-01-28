@@ -1,0 +1,13 @@
+#dependencies
+/node_modules
+
+#misc
+.DS_Store
+
+npm-debug.log*
+
+cypress/videos
+cypress/screenshots
+
+#ignore env local files
+.env*local
