@@ -5,7 +5,7 @@ module.exports = defineConfig({
         setupNodeEvents(on, config) {
             //hier komen de node event listeners
         },
-    baseUrl: 'hier komt de basis url van de omgeving',
+    baseUrl: 'https://www.heeyoo.nl',
     env: {
         //hier komen omgevingvariabelen die je kunt gebruiken om bijv een baseurl te wijzigen
     }},
