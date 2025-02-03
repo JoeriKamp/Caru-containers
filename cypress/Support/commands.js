@@ -32,13 +32,13 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   Cypress.Commands.add("visitUrl", (url='')=>{
     const baseUrl = `/${url}`
     cy.visit(baseUrl);
-    cy.acceptsCookies("cookie");
+    //cy.acceptsCookies("cookie");
     
 
   }); 
   //example cookie accept command
-    Cypress.Commands.add("acceptsCookies", (cookie) => {
+    //Cypress.Commands.add("acceptsCookies", (cookie) => {
     // We gebruiken nu de naam van het product om de juiste card te vinden,
     // en vervolgens op de bijbehorende button te klikken
-    cy.get('#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll').click({force: true});
-});
+    //cy.get('#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll').click({force: true});
+//});

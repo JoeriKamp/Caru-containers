@@ -6,5 +6,5 @@ e2e: {
     setupNodeEvents(on, config){}
     ,
 supportFile: 'cypress/support/e2e.js',
-baseUrl: 'https://www.heeyoo.nl'
+baseUrl: 'https://depotmanager-accp.apps.eu-1c.mendixcloud.com/'
 }});
