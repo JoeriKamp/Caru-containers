@@ -1,4 +1,4 @@
-import Home from "../../../Object repository/Nova/homepage";  // Correct import
+import Home from "../../../Object repository/Depotmanagement/homepage";  // Correct import
 
 const home = new Home();
 
@@ -10,7 +10,7 @@ describe("testing login", () => {
 
   it("should visit home page", () => {
     // Ensure that the login form is visible
-    cy.get("#\\32 03\\.Nova_UI\\.Login\\.loginIdTextBox1", { timeout: 10000 })
+    cy.get("#\\31 70\\.Nova_UI\\.Login\\.loginIdTextBox1", { timeout: 10000 })
       .should('be.visible');
   });
 
@@ -23,15 +23,15 @@ describe("testing login", () => {
     home.SubmitLogin();
     cy.get('#mxui_widget_DialogMessage_0_content').should('have.text', 'The username or password you entered is incorrect.')
   });
-
+  
   it("should login the user", () => {
-    
-const LoginName = 'Testley'
-const LoginPassword = 'Caru01012025!';
+    const loginName = "functionaladmin";
+    const loginPassword = "sE2L+ibYSvb6pPj";
 
-    home.fillLoginName(LoginName);
-    home.fillLoginPassword(LoginPassword);
+    // Fill the login form and submit
+    home.fillLoginName(loginName);
+    home.fillLoginPassword(loginPassword);
     home.SubmitLogin();
-    cy.get('.col-lg > .mx-name-text1').should('have.text', 'Home')
+    cy.get('.mx-title').should('have.text', 'Dashboard')
   });
 });
