@@ -1,47 +1,64 @@
 class relations {
   FillParentAccount(ParentAccount) {
-    cy.get('#\\31 89\\.RelationManagement\\.Relation_Overview\\.textBox1_jsc_7159').type(ParentAccount)
-  }
+    cy.get('.mx-name-layoutGrid3 > :nth-child(1) > :nth-child(1)').type(ParentAccount);
+}
   
-  FillContactName() {
+  FillContactName(ContactName) {
+    cy.get('.mx-name-layoutGrid3 > :nth-child(1) > :nth-child(2)').type(ContactName);
+}
 
-  }
+  FillContactEmail(ContactEmail) {
+    cy.get('.mx-name-layoutGrid3 > :nth-child(1) > :nth-child(3)').type(ContactEmail);
+}
 
-  FillContactEmail() {
+  ChooseState(State)  {
+    cy.get('#downshift-0-toggle-button').click()
+    cy.get('#downshift-0-toggle-button').type(State).type('{enter}');
+}
 
-  }
+  ChooseActivityStatus(ActivityStatus) {
+    cy.get('#downshift-1-toggle-button').click()
+    cy.get('#downshift-1-toggle-button').type(ActivityStatus).type('{enter}');
+}
 
-  ChooseState()  {
+  ChooseBranch(Branch) {
+    cy.get('#downshift-2-toggle-button').click()
+    cy.get('#downshift-2-toggle-button').type(Branch).type('{downarrow}{enter}');
+}
 
-  }
+  FillRelationName(RelationName) {
+    cy.get('.mx-name-layoutGrid3 > :nth-child(2) > :nth-child(1)').type(RelationName);
+}
 
-  ChooseActivityStatus() {
+  FillRelationNumber(RelationNumber) {
+    cy.get('.mx-name-layoutGrid3 > :nth-child(2) > :nth-child(2)').type(RelationNumber);
+}
 
-  }
+  FillShortName(ShortName) {
+    cy.get('.mx-name-layoutGrid3 > :nth-child(2) > :nth-child(3)').type(ShortName);
+}
 
-  ChooseBranch() {
+  ChooseCountry(Country) {
+    cy.get('#downshift-3-toggle-button').click()
+    cy.get('#downshift-3-toggle-button').type(Country).type('{enter}');
+}
 
-  }
+  ChooseRelationType(RelationType) {
+    cy.get('.mx-name-layoutGrid3 > :nth-child(2) > :nth-child(6)').click();
+    cy.get('.mx-name-layoutGrid3 > :nth-child(2) > :nth-child(6)').type(RelationType).type('{enter}');
+}
 
-  FillRelationName() {
+  ClickAddRelation(AddRelation) {
+    cy.get(':nth-child(2) > .btn').click();
+}
 
-  }
+  ClickResetFilters(Resetfilter) {
+    cy.get('.mx-name-actionButton7').click();
+}
 
-  FillRelationNumber() {
+  ClickSearch(Search) {
+    cy.get('.mx-name-actionButton9').click();
+}
 
-  }
-
-  FillShortName() {
-
-  }
-
-  ChooseCountry() {
-
-  }
-
-  ChooseRelationType() {
-
-  }
-   
 }
 export default relations;
