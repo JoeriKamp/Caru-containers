@@ -1,8 +1,4 @@
 class loggedInHomepage {
-    visit() {
-        cypress.visit("/")
-    }
-
     ClickNavigationDashboard() {
         cy.get('.mx-name-navigationTree3-0').click();
     }

@@ -27,6 +27,10 @@ it("should click Failed bizbrain requests on navigation menu",()=>{
     navigate.ClickNavigationFailedBizbrainRequests();
     cy.get('.mx-title').should('have.text', 'Failed requests from/to Bizbrain')
     });
+it("should click settings on navigation menu",()=>{
+    navigate.ClickNavigationSettings();
+    cy.get('.mx-title').should('have.text','System settings')
+    });
 it("should click Containers on navigation menu",()=>{
     navigate.ClickNavigationContainers();
     });
