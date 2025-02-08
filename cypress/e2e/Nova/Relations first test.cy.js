@@ -12,7 +12,7 @@ it("should go to relation and fill in Berlangas", () => {
     const ParentAccount = 'Berlangas'
     const State = 'Texas'
     const Branch = 'industry';
-        
+
         home.visit();
         home.fillLoginName(LoginName);
         home.fillLoginPassword(LoginPassword);
@@ -21,8 +21,8 @@ it("should go to relation and fill in Berlangas", () => {
         navigate.ClickNavigationRelations();
         fill.FillParentAccount(ParentAccount);
         //cy.get('.mx-name-layoutGrid3 > :nth-child(1) > :nth-child(1)').should('have.text','Berlangas')
-        fill.ChooseState(State);
-        fill.ChooseBranch(Branch)
-   
+        fill.ChooseState(State)
+        fill.ChooseBranch(Branch);
+        fill.ClickAddRelation();
     });
     

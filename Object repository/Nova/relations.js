@@ -48,15 +48,15 @@ class relations {
     cy.get('.mx-name-layoutGrid3 > :nth-child(2) > :nth-child(6)').type(RelationType).type('{enter}');
 }
 
-  ClickAddRelation(AddRelation) {
+  ClickAddRelation() {
     cy.get(':nth-child(2) > .btn').click();
 }
 
-  ClickResetFilters(Resetfilter) {
+  ClickResetFilters() {
     cy.get('.mx-name-actionButton7').click();
 }
 
-  ClickSearch(Search) {
+  ClickSearch() {
     cy.get('.mx-name-actionButton9').click();
 }
 
