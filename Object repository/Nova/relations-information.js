@@ -11,8 +11,23 @@ class relationinformation {
     cy.get('.mx-name-switch3 > .widget-switch').click();
 }
 
+   ChooseBlockedReason(){
+    cy.get('#downshift-48-toggle-button').click()
+    cy.get('#downshift-48-toggle-button').type(BlockedReason).type('{enter}');
+}
+
    ClickCaruCompany() {
     cy.get('.mx-name-switch4 > .widget-switch').click();
+}
+
+   ChooseAdministrationCode() {
+    cy.get('#downshift-63-toggle-button').click()
+    cy.get('#downshift-63-toggle-button').type(AdministrationCode).type('{enter}');
+}
+
+   ChooseStockCompany() {
+    cy.get('#downshift-64-toggle-button').click()
+    cy.get('#downshift-64-toggle-button').type(StockCompany).type('{enter}');
 }
 
    FillRelationName() {
@@ -24,7 +39,7 @@ class relationinformation {
 }
 
    ChooseLanguage() {
-    cy.get('#downshift-68-toggle-button').click();
+    cy.get('#downshift-68-toggle-button').click()
     cy.get('#downshift-68-toggle-button').type(ChooseLanguage).type('{enter}');
 }
 
@@ -33,8 +48,10 @@ class relationinformation {
 }
 
    ChooseBranch() {
-    cy.get('.mx-name-comboBox5 > .widget-combobox')
+    cy.get('.mx-name-comboBox5 > .widget-combobox').click()
+    cy.get('.mx-name-comboBox5 > .widget-combobox').type(Branch).Type('{enter}');
 }
+
    FillPhoneNumber() {
     cy.get('.mx-name-layoutGrid16 > :nth-child(2) > :nth-child(3)').type(PhoneNumber);
 }
@@ -53,21 +70,48 @@ class relationinformation {
 }
 
    ChooseCurrency() {
+    cy.get('#downshift-28-toggle-button').click();
+    cy.get('#downshift-28-toggle-button').type(Currency).type('{enter}');
+}
 
+   FillCreditorNumberExact() {
+    cy.get(':nth-child(5) > :nth-child(3)').type(CreditorNumberExact);
+}
+
+   FillRiskProfile() {
+    cy.get('.mx-name-layoutGrid16 > :nth-child(6) > :nth-child(1)').type(RiskProfile);
+}
+
+   FillVatExamptionNumber() {
+   cy.get('.mx-name-layoutGrid16 > :nth-child(6) > :nth-child(2)').type(VatExamptionNumber);
+}
+
+   FillDso() {
+    cy.get(':nth-child(6) > :nth-child(3)').type(Dso);
+}
+
+   FillEoriNumber() {
+    cy.get(':nth-child(8) > :nth-child(1)').type(EoriNumber);
+}
+
+   FillCocNumber() {
+    cy.get(':nth-child(8) > :nth-child(2)').type(CocNumber);
+}
+
+   FillDunsNumber() {
+    cy.get(':nth-child(8) > :nth-child(3)').type(DunsNumber);
+}
+
+   FillExciseNumber() {
+    cy.get(':nth-child(9) > :nth-child(1)').type(ExciseNumber);
+}
+
+   ClickBack() {
+    cy.get('.mx-name-actionButton2').click();
+}
+
+   ClickNextStep() {
+    cy.get('.mx-name-container2 > .mx-name-actionButton1').click();
    }
-   FillCreditorNumberExact
-   FillRiskProfile
-   FillVatExamptionNumber
-   FillDso
-
-   FillEoriNumber
-   FillCocNumber
-   FillDunsNumber
-   FillExciseNumber
-
-
-
-
-
 }
 export default relationinformation;
