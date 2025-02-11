@@ -75,7 +75,6 @@ class relationlocation {
     ClickNext() {
         cy.get('.mx-name-container2 > .mx-name-actionButton1').click();
     }
-
 }
 
 export default relationlocation

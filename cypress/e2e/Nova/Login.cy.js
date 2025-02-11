@@ -10,7 +10,7 @@ describe("testing login", () => {
 
   it("should visit home page", () => {
     // Ensure that the login form is visible
-    cy.get('#\\32 02\\.Nova_UI\\.Login\\.loginIdTextBox1', { timeout: 10000 })
+    cy.get('#\\32 04\\.Nova_UI\\.Login\\.loginIdTextBox1', { timeout: 10000 })
       .should('be.visible');
   });
 
