@@ -9,9 +9,9 @@ const fill = new relations
 it("should go to relation and fill in Berlangas", () => {
     const LoginName = 'Testley'
     const LoginPassword = 'Caru01012025!'
-    const ParentAccount = 'Berlangas'
+    const ParentAccount = 'Demolition Ranch'
     const State = 'Texas'
-    const Branch = 'industry';
+    const Branch = 'logistics';
 
         home.visit();
         home.fillLoginName(LoginName);
@@ -19,10 +19,11 @@ it("should go to relation and fill in Berlangas", () => {
         home.SubmitLogin();
         cy.get('.col-lg > .mx-name-text1').should('have.text', 'Home')
         navigate.ClickNavigationRelations();
-        fill.FillParentAccount(ParentAccount);
+        fill.ClickResetFilters();
+        fill.FillRelationName(ParentAccount);
         //cy.get('.mx-name-layoutGrid3 > :nth-child(1) > :nth-child(1)').should('have.text','Berlangas')
-        fill.ChooseState(State)
+        fill.ChooseState(State);
         fill.ChooseBranch(Branch);
-        fill.ClickAddRelation();
+        fill.ClickSearch();
     });
     

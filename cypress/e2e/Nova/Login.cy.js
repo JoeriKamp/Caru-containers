@@ -2,6 +2,11 @@ import Home from "../../../Object repository/Nova/homepage";  // Correct import
 
 const home = new Home();
 
+const loginName = 'Testley'
+const wrongLoginName = 'Wronglogin'
+const loginPassword = 'Caru01012025!'
+const wrongPassword = 'Wrongpassword';
+
 describe("testing login", () => {
   beforeEach(() => {
     // Visit the homepage before each test
@@ -10,7 +15,7 @@ describe("testing login", () => {
 
   it("should visit home page", () => {
     // Ensure that the login form is visible
-    cy.get('#\\32 04\\.Nova_UI\\.Login\\.loginIdTextBox1', { timeout: 10000 })
+    cy.get('[id*="loginIdTextBox"]', { timeout: 10000 })
       .should('be.visible');
   });
 
