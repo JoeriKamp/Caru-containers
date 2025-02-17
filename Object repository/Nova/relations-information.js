@@ -1,117 +1,117 @@
 class relationinformation {
    ClickIsActive() {
-    cy.get(':nth-child(2) > .mx-name-switch1 > .widget-switch').click();
+      cy.get(':nth-child(2) > .mx-name-switch1 > .widget-switch').click();
 } 
 
    ClickIsApproved(){
-   cy.get('.mx-name-switch2 > .widget-switch').click();
+      cy.get('.mx-name-switch2 > .widget-switch').click();
 }
 
    ClickIsBlocked() {
-    cy.get('.mx-name-switch3 > .widget-switch').click();
+      cy.get('.mx-name-switch3 > .widget-switch').click();
 }
 
-   ChooseBlockedReason(){
-    cy.get('#downshift-48-toggle-button').click()
-    cy.get('#downshift-48-toggle-button').type(BlockedReason).type('{enter}');
+   ChooseBlockedReason(BlockedReason){
+      cy.get('.mx-name-layoutGrid15 > :nth-child(2) > :nth-child(2)').click()
+      cy.get('.mx-name-layoutGrid15 > :nth-child(2) > :nth-child(2)').type(BlockedReason).type('{enter}');
 }
 
    ClickCaruCompany() {
-    cy.get('.mx-name-switch4 > .widget-switch').click();
+      cy.get('.mx-name-switch4 > .widget-switch').click();
 }
 
-   ChooseAdministrationCode() {
-    cy.get('#downshift-63-toggle-button').click()
-    cy.get('#downshift-63-toggle-button').type(AdministrationCode).type('{enter}');
+   ChooseAdministrationCode(AdministrationCode) {
+      cy.get('.mx-name-layoutGrid15 > :nth-child(2) > :nth-child(3)').click()
+      cy.get('.mx-name-layoutGrid15 > :nth-child(2) > :nth-child(3)').type(AdministrationCode).type('{enter}');
 }
 
-   ChooseStockCompany() {
-    cy.get('#downshift-64-toggle-button').click()
-    cy.get('#downshift-64-toggle-button').type(StockCompany).type('{enter}');
+   ChooseStockCompany(StockCompany) {
+      cy.get(':nth-child(3) > .mx-name-container3').click()
+      cy.get(':nth-child(3) > .mx-name-container3').type(StockCompany).type('{enter}');
 }
 
-   FillRelationName() {
-    cy.get('.mx-name-layoutGrid16 > :nth-child(1) > :nth-child(1)').type(RelationName);
+   FillRelationName(RelationName) {
+      cy.get('.mx-name-layoutGrid16 > :nth-child(1) > :nth-child(1)').type(RelationName);
 }
 
-   FillParentAccount() {
-    cy.get('.mx-name-layoutGrid16 > :nth-child(1) > :nth-child(2)').type(ParentAccount);
+   FillParentAccount(ParentAccount) {
+      cy.get('.mx-name-layoutGrid16 > :nth-child(1) > :nth-child(2)').type(ParentAccount);
 }
 
-   ChooseLanguage() {
-    cy.get('#downshift-68-toggle-button').click()
-    cy.get('#downshift-68-toggle-button').type(ChooseLanguage).type('{enter}');
+   ChooseLanguage(ChooseLanguage) {
+      cy.get('.mx-name-layoutGrid16 > :nth-child(1) > :nth-child(3)').click()
+      cy.get('.mx-name-layoutGrid16 > :nth-child(1) > :nth-child(3)').type(ChooseLanguage).type('{enter}');
 }
 
-   FillShortName(){
-    cy.get('.mx-name-layoutGrid16 > :nth-child(2) > :nth-child(1)').type(ShortName);
+   FillShortName(ShortName){
+      cy.get('.mx-name-layoutGrid16 > :nth-child(2) > :nth-child(1)').type(ShortName);
 }
 
-   ChooseBranch() {
-    cy.get('.mx-name-comboBox5 > .widget-combobox').click()
-    cy.get('.mx-name-comboBox5 > .widget-combobox').type(Branch).Type('{enter}');
+   ChooseBranch(Branch) {
+      cy.get('.mx-name-layoutGrid16 > :nth-child(2) > :nth-child(2)').click()
+      cy.get('.mx-name-layoutGrid16 > :nth-child(2) > :nth-child(2)').type(Branch).Type('{enter}');
 }
 
-   FillPhoneNumber() {
-    cy.get('.mx-name-layoutGrid16 > :nth-child(2) > :nth-child(3)').type(PhoneNumber);
+   FillPhoneNumber(PhoneNumber) {
+      cy.get('.mx-name-layoutGrid16 > :nth-child(2) > :nth-child(3)').type(PhoneNumber);
 }
 
-   ChooseProductGroup() {
-    cy.get('#downshift-70-toggle-button').click();
-    cy.get('#downshift-70-toggle-button').type(ProductGroup).type('{enter}');
+   ChooseProductGroup(ProductGroup) {
+      cy.get('.mx-name-layoutGrid16 > :nth-child(3) > :nth-child(1)').click();
+      cy.get('.mx-name-layoutGrid16 > :nth-child(3) > :nth-child(1)').type(ProductGroup).type('{enter}');
 }
 
-   FillWebsiteUrl() {
-    cy.get('.mx-name-layoutGrid16 > :nth-child(3) > :nth-child(2)').type(WebsiteUrl);
+   FillWebsiteUrl(WebsiteUrl) {
+      cy.get('.mx-name-layoutGrid16 > :nth-child(3) > :nth-child(2)').type(WebsiteUrl);
 }
 
-   FillCreditLimit() {
-    cy.get('.mx-name-layoutGrid16 > :nth-child(5) > :nth-child(1)').type(CreditLimit);
+   FillCreditLimit(CreditLimit) {
+      cy.get('.mx-name-layoutGrid16 > :nth-child(5) > :nth-child(1)').type(CreditLimit);
 }
 
-   ChooseCurrency() {
-    cy.get('#downshift-28-toggle-button').click();
-    cy.get('#downshift-28-toggle-button').type(Currency).type('{enter}');
+   ChooseCurrency(Currency) {
+      cy.get('.mx-name-layoutGrid16 > :nth-child(5) > :nth-child(2)').click();
+      cy.get('.mx-name-layoutGrid16 > :nth-child(5) > :nth-child(2)').type(Currency).type('{enter}');
 }
 
-   FillCreditorNumberExact() {
-    cy.get(':nth-child(5) > :nth-child(3)').type(CreditorNumberExact);
+   FillCreditorNumberExact(CreditorNumberExact) {
+      cy.get(':nth-child(5) > :nth-child(3)').type(CreditorNumberExact);
 }
 
-   FillRiskProfile() {
-    cy.get('.mx-name-layoutGrid16 > :nth-child(6) > :nth-child(1)').type(RiskProfile);
+   FillRiskProfile(RiskProfile) {
+      cy.get('.mx-name-layoutGrid16 > :nth-child(6) > :nth-child(1)').type(RiskProfile);
 }
 
-   FillVatExamptionNumber() {
-   cy.get('.mx-name-layoutGrid16 > :nth-child(6) > :nth-child(2)').type(VatExamptionNumber);
+   FillVatExamptionNumber(VatExamptionNumber) {
+      cy.get('.mx-name-layoutGrid16 > :nth-child(6) > :nth-child(2)').type(VatExamptionNumber);
 }
 
-   FillDso() {
-    cy.get(':nth-child(6) > :nth-child(3)').type(Dso);
+   FillDso(Dso) {
+      cy.get(':nth-child(6) > :nth-child(3)').type(Dso);
 }
 
-   FillEoriNumber() {
-    cy.get(':nth-child(8) > :nth-child(1)').type(EoriNumber);
+   FillEoriNumber(EoriNumber) {
+      cy.get(':nth-child(8) > :nth-child(1)').type(EoriNumber);
 }
 
-   FillCocNumber() {
-    cy.get(':nth-child(8) > :nth-child(2)').type(CocNumber);
+   FillCocNumber(CocNumber) {
+      cy.get(':nth-child(8) > :nth-child(2)').type(CocNumber);
 }
 
-   FillDunsNumber() {
-    cy.get(':nth-child(8) > :nth-child(3)').type(DunsNumber);
+   FillDunsNumber(DunsNumber) {
+      cy.get(':nth-child(8) > :nth-child(3)').type(DunsNumber);
 }
 
-   FillExciseNumber() {
-    cy.get(':nth-child(9) > :nth-child(1)').type(ExciseNumber);
+   FillExciseNumber(ExciseNumber) {
+      cy.get(':nth-child(9) > :nth-child(1)').type(ExciseNumber);
 }
 
    ClickBack() {
-    cy.get('.mx-name-actionButton2').click();
+      cy.get('.mx-name-actionButton2').click();
 }
 
    ClickNextStep() {
-    cy.get('.mx-name-container2 > .mx-name-actionButton1').click();
+      cy.get('.mx-name-container2 > .mx-name-actionButton1').click();
    }
 }
 export default relationinformation;

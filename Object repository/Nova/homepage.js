@@ -4,19 +4,19 @@ class Home {
   } 
 
   fillLoginName(loginName) {
-    cy.get('#\\32 04\\.Nova_UI\\.Login\\.loginIdTextBox1').type(loginName);
+    cy.get('[id*="loginIdTextBox"]').type(loginName);
     
   }
   fillWrongloginName(wrongLoginName) {
-    cy.get('#\\32 04\\.Nova_UI\\.Login\\.loginIdTextBox1').type(wrongLoginName);
+    cy.get('[id*="loginIdTextBox"]').type(wrongLoginName);
   }
   fillLoginPassword(loginPassword){
-    cy.get('#\\32 04\\.Nova_UI\\.Login\\.passwordTextBox2').type(loginPassword);
+    cy.get('[id*="passwordTextBox2"]').type(loginPassword);
   }
   fillWrongLoginPassword(wrongPassword){
-    cy.get('#\\32 04\\.Nova_UI\\.Login\\.passwordTextBox2').type(wrongPassword);
+    cy.get('[id*="passwordTextBox2"]').type(wrongPassword);
   }
-  SubmitLogin() {
+  SubmitLogin() { 
     cy.get('#mxui_widget_LoginButton_0').click();
   }
 }

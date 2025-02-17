@@ -1,43 +1,50 @@
+const GRIDLAYOUT = `.mx-name-dataView11 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid`;
+
 class relationtypes {
     //Houd rekening met dat er meerdere dezelfde commands zijn omdat een type bepaalde invulling nodig heeft, maar wel andere element locators heeft.
     //Keep in mind that there are multiple same commands with other element locators, which fit the relation type.
+    
+
+ClickTitle() {
+        cy.get('.mx-title').click();
+}
 
     ChooseRelationTypes(Relationtypes) {
-        cy.get('.mx-name-container2 > .mx-name-actionButton1').click()
-        cy.get('.mx-name-container2 > .mx-name-actionButton1').type(Relationtypes).type('{enter}');
+        cy.get('.mx-name-layoutGrid3 > :nth-child(2) > .col-lg').click()
+        cy.get('.mx-name-layoutGrid3 > :nth-child(2) > .col-lg').type(Relationtypes).type('{downarrow}{enter}');
 }
     //Rental customer
-    ChooseCurrency() {
-        cy.get('#downshift-190-toggle-button').click()
-        cy.get('#downshift-190-toggle-button').type(Currency).type('{enter}');
+    ChooseCurrencyRental(Currency) {
+        cy.get(`${GRIDLAYOUT}4> :nth-child(1) > :nth-child(1)`).click()
+        cy.get('.mx-name-dataView11 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(1) > :nth-child(1)').type(Currency).type('{enter}');
 }
 
-    ChooseAccountManager() {
-        cy.get('#downshift-191-toggle-button').click()
-        cy.get('#downshift-191-toggle-button').type(AccountManager).type('{enter}');
+    ChooseAccountManager(AccountManager) {
+        cy.get('.mx-name-dataView11 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(2) > :nth-child(2)').click()
+        cy.get('.mx-name-dataView11 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(2) > :nth-child(2)').type(AccountManager).type('{enter}');
 }
 
-    ChooseVatPercentage() {
-        cy.get('#downshift-192-toggle-button').click()
-        cy.get('#downshift-192-toggle-button').type(Vatpercentage).type('{enter}');
+    ChooseVatPercentage(Vatpercentage) {
+        cy.get('.mx-name-dataView11 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(2) > :nth-child(1)').click()
+        cy.get('.mx-name-dataView11 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(2) > :nth-child(1)').type(Vatpercentage).type('{enter}');
 }
 
-    ChooseRentalType() {
+    ChooseRentalType(RentalType) {
         cy.get('.mx-name-dataView11 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(3) > :nth-child(1)').click()
         cy.get('.mx-name-dataView11 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(3) > :nth-child(1)').type(RentalType).type('{enter}');
 }
 
-    ChooseBillingType() {
+    ChooseBillingType(BillingType) {
         cy.get('.mx-name-dataView11 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(3) > :nth-child(2)').click()
         cy.get('.mx-name-dataView11 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(3) > :nth-child(2)').type(BillingType).type('{enter}');
 }
 
-    ChoosePaymentTerms() {
-        cy.get('#downshift-193-toggle-button').click()
-        cy.get('#downshift-193-toggle-button').type(PaymentTerms).type('{enter}');
+    ChoosePaymentTerms(PaymentTerms) {
+        cy.get('.mx-name-dataView11 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(4) > :nth-child(1)').click()
+        cy.get('.mx-name-dataView11 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(4) > :nth-child(1)').type(PaymentTerms).type('{enter}');
 }
 
-    ChooseInvoiceType() {
+    ChooseInvoiceType(InvoiceType) {
         cy.get('.mx-name-dataView11 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(4) > :nth-child(2) > .mx-name-dropDown1').click()
         cy.get('.mx-name-dataView11 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(4) > :nth-child(2) > .mx-name-dropDown1').type(InvoiceType).type('{enter}');
 }
@@ -46,43 +53,41 @@ class relationtypes {
         cy.get('.mx-name-dataView11 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-4 > .mx-name-container1 > .mx-name-layoutGrid19 > .row > .col-lg-auto > .btn').click();
 }
     //Sales Customer
-    ChooseCurrency() {
-        cy.get('#downshift-224-toggle-button').click()
-        cy.get('#downshift-224-toggle-button').type(Currency).type.type('{enter}');
+    ChooseCurrencySales(CurrencySales) {
+        cy.get('.mx-name-dataView12 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(1) > :nth-child(1)').click()
+        cy.get('.mx-name-dataView12 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(1) > :nth-child(1)').type(CurrencySales).type('{enter}');
 }
 
-    ChooseAccountManager() {
-        cy.get('#downshift-225-toggle-button').click()
-        cy.get('#downshift-225-toggle-button').type(AccountManager).type('{enter}');
+    ChooseAccountManagerSales(AccountManagerSales) {
+        cy.get('.mx-name-dataView12 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(1) > :nth-child(2)').click()
+        cy.get('.mx-name-dataView12 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(1) > :nth-child(2)').type(AccountManagerSales).type('{enter}');
 }
 
-    ChooseVatPercentage() {
-        cy.get('#downshift-226-toggle-button').click()
-        cy.get('#downshift-226-toggle-button').type(Vatpercentage).type('{enter}');
+    ChooseVatPercentageSales(VatpercentageSales) {
+        cy.get('.mx-name-dataView12 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(2) > :nth-child(1)').click()
+        cy.get('.mx-name-dataView12 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(2) > :nth-child(1)').type(VatpercentageSales).type('{enter}');
 }
 
-    ChooseFrequencyCode() {
-        cy.get('.mx-name-dataView12 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(2) > :nth-child(2)').click()
-        cy.get('.mx-name-dataView12 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(2) > :nth-child(2)').type(FrequencyCode).type('{enter}');
+    ChooseFrequencyCodeSales(FrequencyCodeSales) {
+        cy.get('.mx-name-dataView12 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(2) > :nth-child(2)').find('select').select(FrequencyCodeSales);
 }
-
+   
     ClickBlockingInvoice() {
         cy.get(':nth-child(3) > :nth-child(1) > .mx-name-switch1 > .widget-switch').click();
 }
 
-    ChooseBillingType() {
-        cy.get('.mx-name-dataView12 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(3) > :nth-child(2)').click()
-        cy.get('.mx-name-dataView12 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(3) > :nth-child(2)').type(BillingType).type('{enter}');
+    ChooseBillingTypeSales(BillingType) {
+        cy.get('.mx-name-dataView12 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(3) > :nth-child(2)').find('select').select(BillingType);
 }
 
-    ChoosePaymentTerms() {
-        cy.get('#downshift-227-toggle-button').click()
-        cy.get('#downshift-227-toggle-button').type(PaymentTerms).type('{enter}');
+    ChoosePaymentTerms(PaymentTerms) {
+        cy.get('.mx-name-dataView12 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(4) > :nth-child(1)').click()
+        cy.get('.mx-name-dataView12 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(4) > :nth-child(1)').type(PaymentTerms).type('{downarrow}{enter}');
 }
 
-    ChooseInvoiceType() {
+    ChooseInvoiceTypeSales(InvoiceTypeSales) {
         cy.get('.mx-name-dataView12 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(4) > :nth-child(2)').click()
-        cy.get('.mx-name-dataView12 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(4) > :nth-child(2)').type(InvoiceType).type('{enter}');
+        cy.get('.mx-name-dataView12 > :nth-child(1) > .mx-name-dataView2 > :nth-child(1) > .mx-name-dataView1 > :nth-child(1) > .mx-name-container29 > .mx-name-layoutGrid1 > :nth-child(1) > .col-lg-8 > .mx-dataview > .mx-dataview-content > .mx-name-layoutGrid4 > :nth-child(4) > :nth-child(2)').type(InvoiceTypeSales).type('{enter}');
 }
 
     ClickVatNumber() {
@@ -90,24 +95,28 @@ class relationtypes {
 }
 
     //Supplier
-    ChooseCurrency() {
-        cy.get('#downshift-232-toggle-button').click()
-        cy.get('#downshift-232-toggle-button').type(Currency).type.type('{enter}');
+    ChooseCurrency(Currency) {
+        cy.get('.mx-name-layoutGrid5 > .row > :nth-child(1)').click()
+        cy.get('.mx-name-layoutGrid5 > .row > :nth-child(1)').type(Currency).type('{enter}');
 }
 
-    ChooseAccountManager() {
-        cy.get('#downshift-233-toggle-button').click()
-        cy.get('#downshift-233-toggle-button').type(AccountManager).type('{enter}');
+    ChooseAccountManager(AccountManager) {
+        cy.get('.mx-name-layoutGrid5 > .row > :nth-child(2)').click()
+        cy.get('.mx-name-layoutGrid5 > .row > :nth-child(2)').type(AccountManager).type('{enter}');
 }
 
     //Transport Company
-    ChooseCurrency() {
-        cy.get('#downshift-286-toggle-button').click()
-        cy.get('#downshift-286-toggle-button').type(Currency).type.type('{enter}');
+    ChooseCurrency(Currency) {
+        cy.get('.mx-name-layoutGrid8 > .row > :nth-child(1)').click()
+        cy.get('.mx-name-layoutGrid8 > .row > :nth-child(1)').type(Currency).type('{enter}');
+}
+
+    FillFtpDirectory(FtpDirectory) {
+        cy.get('.mx-name-layoutGrid8 > .row > :nth-child(2)').type(FtpDirectory);
 }
 
     ClickCancel() {
-        cy.get('#downshift-286-toggle-button').click();
+        cy.get('.mx-name-actionButton3').click();
 }
 
     ClickBack() {
@@ -115,7 +124,7 @@ class relationtypes {
 }
 
     ClickNextStep() {
-        cy.get('.mx-name-container2 > .mx-name-actionButton1')
+        cy.get('.mx-name-container2 > .mx-name-actionButton1').click();
 }
 
 }

@@ -3,70 +3,70 @@ class relationcontacts {
         cy.get(':nth-child(2) > .btn').click();
 }
 
-    FillFirstName() {
-        cy.get('.mx-name-container2 > .mx-name-actionButton1').type(Firstname);
+    FillFirstName(FirstName) {
+        cy.get('.mx-name-layoutGrid4 > :nth-child(1) > :nth-child(1)').type(FirstName);
 }
 
-    FillLastName() {
+    FillLastName(LastName) {
         cy.get('.mx-name-layoutGrid4 > :nth-child(1) > :nth-child(2)').type(LastName);
 }
 
-    FillEmail() {
+    FillEmail(Email) {
         cy.get('.mx-name-layoutGrid7 > .row > .col-lg').type(Email);
 }
 
-    ChooseGender() {
-        cy.get('.mx-name-layoutGrid4 > :nth-child(2) > :nth-child(1)').click()
-        cy.get('.mx-name-layoutGrid4 > :nth-child(2) > :nth-child(1)').type('{downarrow}{enter}');
+    ChooseGender(Gender) {
+        cy.get('.mx-name-layoutGrid4 > :nth-child(2) > :nth-child(1)').find('select').select(Gender);
+        
 }
 
-    ChooseJobTitle() {
+    ChooseJobTitle(JobTitle) {
         cy.get('.mx-name-layoutGrid4 > :nth-child(2) > :nth-child(2)').type(JobTitle);
 }
 
-    FillOfficeNumber() {
+    FillOfficeNumber(OfficeNumber) {
         cy.get('.mx-name-layoutGrid4 > :nth-child(3) > :nth-child(1)').type(OfficeNumber);
 }
 
-    FillMobileNumber() {
+    FillMobileNumber(MobileNumber) {
         cy.get('.mx-name-layoutGrid4 > :nth-child(3) > :nth-child(2)').type(MobileNumber);
 }
 
-    ChooseInvoiceContact() {
-        cy.get('#downshift-468-toggle-button').click()
-        cy.get('#downshift-468-toggle-button').type(InvoiceContact).type('{downarrow}{enter}');
+    ChooseInvoiceContact(InvoiceContact) {
+        cy.get('.mx-name-layoutGrid4 > :nth-child(4) > :nth-child(1)').click()
+        cy.get('.mx-name-layoutGrid4 > :nth-child(4) > :nth-child(1)').type(InvoiceContact).type('{downarrow}{enter}');
 }
 
-    ChooseDefaultOrderedBy() {
-        cy.get('#downshift-469-toggle-button').click()
-        cy.get('#downshift-469-toggle-button').type(DefaultOrderedBy).type('{downarrow}{enter}');
+    ChooseDefaultOrderedBy(DefaultOrderedBy) {
+        cy.get('.mx-name-layoutGrid4 > :nth-child(4) > :nth-child(2)').click()
+        cy.get('.mx-name-layoutGrid4 > :nth-child(4) > :nth-child(2)').type(DefaultOrderedBy).type('{downarrow}{enter}');
 }
 
-    FillAdress() {
+    FillAdress(Adress) {
         cy.get('.mx-name-layoutGrid8 > :nth-child(1) > :nth-child(1)').type(Adress);
 }
 
-    FillPostalCode() {
+    FillPostalCode(PostalCode) {
         cy.get('.mx-name-layoutGrid8 > :nth-child(1) > :nth-child(2)').type(PostalCode);
 }
 
-    FillDepartment() {
+    FillDepartment(Department) {
         cy.get('.mx-name-layoutGrid8 > :nth-child(1) > :nth-child(3)').type(Department);
 }
 
-    ChooseCountry() {
-        cy.get('#downshift-470-toggle-button').click()
-        cy.get('#downshift-470-toggle-button').type(Country).type('{enter}');
+    ChooseCountry(Country) {
+        cy.get('.mx-name-layoutGrid8 > :nth-child(2) > :nth-child(2)').click()
+        cy.get('.mx-name-layoutGrid8 > :nth-child(2) > :nth-child(2)').type(Country).type('{enter}');
 }
     //Is niet klikbaar tenzij US als country wordt gekozen
     //Is only usable if country=US
-    ChooseState() {
+    ChooseState(State) {
         cy.get('.mx-name-comboBox9 > .widget-combobox').click()
         cy.get('.mx-name-comboBox9 > .widget-combobox').type(State).type('{enter}');
 }
 
-    FillCity() {
-        cy.get('.mx-name-layoutGrid8 > :nth-child(2) > :nth-child(3)').type(city);
+    FillCity(City) {
+        cy.get('.mx-name-layoutGrid8 > :nth-child(2) > :nth-child(3)').type(City);
 }
     //cancel button when you are adding a contact
     ClickCancel() {

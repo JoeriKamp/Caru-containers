@@ -4,12 +4,17 @@ class relationdocument {
 }
 
     DropFile () {
-        cy.get('.filedropper__dropzone').selectfile('C:\Users\JoeriKampijon\Documents\TestBestand');
+        cy.get('input.filedropper__input').attachFile('TestExcel.xlsx'); // Change this to your actual file name
 }
 
-    ChooseLabel() {
-        cy.get('#downshift-241-toggle-button').click()
-        cy.get('#downshift-241-toggle-button').type(Label).type('{enter}');
+    ChooseLabel(Label) {
+        cy.get('.mx-dataview-content > .mx-layoutgrid > :nth-child(2) > .col-lg').click()
+        cy.get('.mx-dataview-content > .mx-layoutgrid > :nth-child(2) > .col-lg').type(Label).type('{enter}');
+}
+
+    //Button to clear the error message to upload a file
+    ClickOkErrorMessage() {
+    cy.get('.modal-footer > .btn').click();
 }
 
     //Cancel button when you are in the pop up screen (add document)
