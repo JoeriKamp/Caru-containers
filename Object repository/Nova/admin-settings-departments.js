@@ -23,7 +23,7 @@ class settingsdepartments {
         cy.get('div.filter-container input.filter-input').eq(1).type(Description);
 }
 
-    //selecting choosecountry and isarchived is not programmed yet
+    //selecting choosecountry and isarchived is not made yet
 }
 
 export default settingsdepartments;

@@ -1,4 +1,4 @@
-class admindepreciationrules {
+class financedepreciationrules {
     ClickAddDepreciationRule() {
     cy.get(':nth-child(2) > .btn').click();
 }
@@ -49,11 +49,11 @@ class admindepreciationrules {
 
     ClickCancelDeleteDepreciationRule() {
         cy.get('.modal-footer > :nth-child(2)').click();
-    }
+}
     
     ClickConfirmDeleteDepreciationRule() {
         cy.get('.modal-footer > .btn-primary').click();
-    }
+}
 }
 
-export default admindepreciationrules;
+export default financedepreciationrules;
