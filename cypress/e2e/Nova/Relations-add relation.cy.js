@@ -53,17 +53,6 @@ it("will make a new relation",() => {
     information.ChooseLanguage(Language);
     information.ClickNextStep();
     
-    type.ChooseRelationTypes(Relationtypes);
-    type.ClickTitle();
-    type.ChooseCurrencySales(ChooseCurrency);
-    type.ChooseVatPercentageSales(VatpercentageSales);
-    type.ChooseFrequencyCodeSales(FrequencyCodeSales);
-    type.ChooseBillingTypeSales(BillingType);
-    type.ChoosePaymentTerms(PaymentTerms);
-    type.ClickTitle();
-    type.ClickNextStep();
-    cy.wait(1000);
-
     location.ClickAddLocation();
     location.FillLocationName(LocationName);
     location.ChooseLocationType(LocationType);
@@ -76,6 +65,18 @@ it("will make a new relation",() => {
     cy.wait(1000);
     location.ClickNext();
     cy.wait(1000);
+
+    type.ChooseRelationTypes(Relationtypes);
+    type.ClickTitle();
+    type.ChooseCurrencySales(ChooseCurrency);
+    type.ChooseVatPercentageSales(VatpercentageSales);
+    type.ChooseFrequencyCodeSales(FrequencyCodeSales);
+    type.ChooseBillingTypeSales(BillingType);
+    type.ChoosePaymentTerms(PaymentTerms);
+    type.ClickTitle();
+    type.ClickNextStep();
+    cy.wait(1000);
+  
     
     contact.ClickAddContact();
     cy.wait(700);
