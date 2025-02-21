@@ -27,8 +27,8 @@ class UserManagement {
         cy.get('.mx-name-layoutGrid2 > :nth-child(2) > :nth-child(2)').click();
 }
 
-    ClickSelectUserRoleAddUSer() {
-        cy.get('#mxui_widget_ControlBarButton_11').click();
+    ClickSelectUserRoleAddUser() {
+        cy.get('[id^="mxui_widget_ControlBarButton_"]').eq(1).click();
 }
 
     ChooseBoardMemberUserRoleAddUser() {

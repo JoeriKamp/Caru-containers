@@ -17,14 +17,19 @@ class loggedInHomepage {
         cy.get('.mx-name-navigationTree3-1-5').click();
     }
 
+    ClickPurchaseInvoices() {
+        cy.get('.mx-name-navigationTree3-1').click(),
+        cy.get('.mx-name-navigationTree3-1-6').click()
+
+    }
     ClickNavigationUserManagement(){
         cy.get('.mx-name-navigationTree3-1').click(),
-        cy.get('.mx-name-navigationTree3-1-6').click();
+        cy.get('.mx-name-navigationTree3-1-7').click();
     }
    
     ClickNavigationTariffContracts(){
         cy.get('.mx-name-navigationTree3-1').click(),
-        cy.get('.mx-name-navigationTree3-1-7').click();
+        cy.get('.mx-name-navigationTree3-1-8').click();
     }
    
     ClickNavigationContainers(){
@@ -69,6 +74,11 @@ class loggedInHomepage {
         cy.get('.mx-name-navigationTree3-4-0').click();
     }
 
+    ClickOUtstandingInvoices() {
+        cy.get('.mx-name-navigationTree3-4').click(),
+        cy.get('.mx-name-navigationTree3-4-1').click();
+    }
+    
     ClickNavigationOrders(){
         cy.get('.mx-name-navigationTree3-5').click();
     }
